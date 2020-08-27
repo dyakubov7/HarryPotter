@@ -110,4 +110,5 @@ C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\net
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\Xunit.SkippableFact.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Schema.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\obj\Debug\netcoreapp3.1\RestSharpTraining.csproj.CoreCompileInputs.cache

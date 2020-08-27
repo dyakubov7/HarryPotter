@@ -1,19 +1,19 @@
 ﻿using NUnit.Framework;
 using RestSharp;
+using RestSharpTraining.pojos;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-
+using Newtonsoft.Json;
 namespace RestSharpTraining
 {
    
-    class HarryPotter
+        public class HarryPotter: Endpoints
     {
-        public const string apiKey = "$2a$10$acz0eQe5a76QO5wgZZ.piuUZZ.chuB2wObXDm7WIQjpkCBMJc6niK";
-        IRestClient client = new RestClient("https://www.potterapi.com/v1/");
 
-        string hannah = "5a0fa4daae5bc100213c232e";
+        IRestClient client = new RestClient(Endpoints.BASE_URL);
+
         [SetUp]
         public void setup()
         {
@@ -22,7 +22,7 @@ namespace RestSharpTraining
         [Test]
         public void sortingHat()
         {
-            IRestRequest request = new RestRequest("/sortingHat", DataFormat.Json);
+            IRestRequest request = new RestRequest(Endpoints.GET_HOUSES);
             IRestResponse response = client.Get(request);
             Console.WriteLine(response.Content);
             List<string> houses = new List<string>();
@@ -45,20 +45,43 @@ namespace RestSharpTraining
 
         public void getCharacters()
         {
-            IRestRequest request = new RestRequest("/characters").AddParameter("key",apiKey);
+            IRestRequest request = new RestRequest(Endpoints.GET_CHARACTERS).AddParameter("key",Endpoints.API_KEY);
             IRestResponse response = client.Get(request);
+            string content = response.Content;
+           
+            IList<Character> listOfCharacters = JsonConvert.DeserializeObject<List<Character>>(content);
+            Console.WriteLine(listOfCharacters);
+
+
+            //foreach (Character each in listOfCharacters)
+            //{
+            //    Console.WriteLine(each.Name);
+            //}
+
+
             Assert.IsTrue(response.IsSuccessful);
             Assert.AreEqual("OK", response.StatusCode.ToString());
 
-            Console.WriteLine(response.Content);
+            //Console.WriteLine(response.Content);
 
         }
 
         [Test]
         public void getAcharacter()
         {
-            IRestRequest request = new RestRequest("/characters/" + hannah).AddParameter("key",apiKey);
+            IRestRequest request = new RestRequest(Endpoints.GET_ONE_CHARACTER+Endpoints.HANNAH_ID).AddParameter("key",Endpoints.API_KEY);
             IRestResponse response = client.Get(request);
+            
+            string content = response.Content;
+
+            Character hannah = JsonConvert.DeserializeObject<Character>(content);
+
+            Assert.AreEqual("Hannah Abbott", hannah.Name);
+            Assert.AreEqual("OK", response.StatusCode.ToString());
+
+            Console.WriteLine(hannah.MinistryOfMagic);
+            Console.WriteLine(hannah.Name);
+            Console.WriteLine(hannah.School);
             Console.WriteLine(response.Content);
 
 

@@ -28,6 +28,5 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgValidation Condition=" '$(PkgValidation)' == '' ">C:\Users\dyakubov\.nuget\packages\validation\2.4.18</PkgValidation>
     <PkgBoDi Condition=" '$(PkgBoDi)' == '' ">C:\Users\dyakubov\.nuget\packages\bodi\1.4.1</PkgBoDi>
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
   </PropertyGroup>
 </Project>
