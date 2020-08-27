@@ -655,6 +655,24 @@
           "build/SpecFlow.targets": {}
         }
       },
+      "SpecFlow.NUnit/3.4.3": {
+        "type": "package",
+        "dependencies": {
+          "NUnit": "3.11.0",
+          "SpecFlow": "[3.4.3]",
+          "SpecFlow.Tools.MsBuild.Generation": "[3.4.3]"
+        },
+        "compile": {
+          "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {}
+        },
+        "build": {
+          "build/SpecFlow.NUnit.props": {},
+          "build/SpecFlow.NUnit.targets": {}
+        }
+      },
       "SpecFlow.Tools.MsBuild.Generation/3.4.3": {
         "type": "package",
         "dependencies": {
@@ -666,25 +684,6 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/SpecFlow.Tools.MsBuild.Generation.props": {}
-        }
-      },
-      "SpecFlow.xUnit/3.4.3": {
-        "type": "package",
-        "dependencies": {
-          "SpecFlow": "[3.4.3]",
-          "SpecFlow.Tools.MsBuild.Generation": "[3.4.3]",
-          "Xunit.SkippableFact": "1.3.12",
-          "xunit.core": "2.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll": {}
-        },
-        "build": {
-          "build/SpecFlow.xUnit.props": {},
-          "build/SpecFlow.xUnit.targets": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -1772,76 +1771,6 @@
         "runtime": {
           "lib/netstandard2.0/Utf8Json.dll": {}
         }
-      },
-      "Validation/2.4.18": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.3/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/Validation.dll": {}
-        }
-      },
-      "xunit.abstractions/2.0.2": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/xunit.abstractions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/xunit.abstractions.dll": {}
-        }
-      },
-      "xunit.core/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "xunit.extensibility.core": "[2.4.0]",
-          "xunit.extensibility.execution": "[2.4.0]"
-        },
-        "build": {
-          "build/xunit.core.props": {},
-          "build/xunit.core.targets": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/xunit.core.props": {},
-          "buildMultiTargeting/xunit.core.targets": {}
-        }
-      },
-      "xunit.extensibility.core/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "xunit.abstractions": "2.0.2"
-        },
-        "compile": {
-          "lib/netstandard2.0/xunit.core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/xunit.core.dll": {}
-        }
-      },
-      "xunit.extensibility.execution/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "xunit.extensibility.core": "[2.4.0]"
-        },
-        "compile": {
-          "lib/netstandard2.0/xunit.execution.dotnet.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/xunit.execution.dotnet.dll": {}
-        }
-      },
-      "Xunit.SkippableFact/1.3.12": {
-        "type": "package",
-        "dependencies": {
-          "Validation": "2.4.18",
-          "xunit.extensibility.execution": "2.4.0"
-        },
-        "compile": {
-          "lib/netstandard1.1/Xunit.SkippableFact.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/Xunit.SkippableFact.dll": {}
-        }
       }
     }
   },
@@ -2787,6 +2716,30 @@
         "specflow.nuspec"
       ]
     },
+    "SpecFlow.NUnit/3.4.3": {
+      "sha512": "+L/wyCSI41r6N8x/Q2pt3i4PT2oTcVENE3IWefeCD4tYmZHIgaD5wv/GpcNNvQTysd7LjfUkyedXPX+t9oNXrg==",
+      "type": "package",
+      "path": "specflow.nunit/3.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/NUnit.AssemblyHooks.cs",
+        "build/NUnit.AssemblyHooks.vb",
+        "build/SpecFlow.NUnit.props",
+        "build/SpecFlow.NUnit.targets",
+        "build/net461/TechTalk.SpecFlow.NUnit.Generator.SpecFlowPlugin.dll",
+        "build/net461/TechTalk.SpecFlow.NUnit.Generator.SpecFlowPlugin.pdb",
+        "build/netcoreapp2.1/TechTalk.SpecFlow.NUnit.Generator.SpecFlowPlugin.dll",
+        "build/netcoreapp2.1/TechTalk.SpecFlow.NUnit.Generator.SpecFlowPlugin.pdb",
+        "lib/net461/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll",
+        "lib/net461/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb",
+        "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll",
+        "lib/netstandard2.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.pdb",
+        "specflow.nunit.3.4.3.nupkg.sha512",
+        "specflow.nunit.nuspec"
+      ]
+    },
     "SpecFlow.Tools.MsBuild.Generation/3.4.3": {
       "sha512": "fokg1BsfmIrGyJMJz0fM2LCzN2eNlouJo7S1aLN9xGxYTYT0id8sh8gp9dTPDtTY+J6x5sTjdytwdRMHSUBlzA==",
       "type": "package",
@@ -2969,31 +2922,6 @@
         "tasks/netcoreapp2.1/TechTalk.SpecFlow.Utils.dll",
         "tasks/netcoreapp2.1/TechTalk.SpecFlow.dll",
         "tasks/netcoreapp2.1/Utf8Json.dll"
-      ]
-    },
-    "SpecFlow.xUnit/3.4.3": {
-      "sha512": "kMZ3Ts+fC3cBfUX08liJ+KiycvjCFhuIdzj0gAKGvjlenJxemeMHaC4ZxvaWhwigl3rjVyL9aas+6MqwxMYtCw==",
-      "type": "package",
-      "path": "specflow.xunit/3.4.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "build/SpecFlow.xUnit.props",
-        "build/SpecFlow.xUnit.targets",
-        "build/net461/TechTalk.SpecFlow.xUnit.Generator.SpecFlowPlugin.dll",
-        "build/net461/TechTalk.SpecFlow.xUnit.Generator.SpecFlowPlugin.pdb",
-        "build/netcoreapp2.1/TechTalk.SpecFlow.xUnit.Generator.SpecFlowPlugin.dll",
-        "build/netcoreapp2.1/TechTalk.SpecFlow.xUnit.Generator.SpecFlowPlugin.pdb",
-        "build/xUnit.AssemblyHooks.cs",
-        "build/xUnit.AssemblyHooks.vb",
-        "lib/net461/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll",
-        "lib/net461/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll.config",
-        "lib/net461/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.pdb",
-        "lib/netstandard2.0/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll",
-        "lib/netstandard2.0/TechTalk.SpecFlow.xUnit.SpecFlowPlugin.pdb",
-        "specflow.xunit.3.4.3.nupkg.sha512",
-        "specflow.xunit.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -6119,125 +6047,6 @@
         "utf8json.1.3.7.nupkg.sha512",
         "utf8json.nuspec"
       ]
-    },
-    "Validation/2.4.18": {
-      "sha512": "NfvWJ1QeuZ1FQCkqgXTu1cOkRkbNCfxs4Tat+abXLwom6OXbULVhRGp34BTvVB4XPxj6VIAl7KfLfStXMt/Ehw==",
-      "type": "package",
-      "path": "validation/2.4.18",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net20/Validation.dll",
-        "lib/net20/Validation.xml",
-        "lib/net40/Validation.dll",
-        "lib/net40/Validation.xml",
-        "lib/net45/Validation.dll",
-        "lib/net45/Validation.xml",
-        "lib/netstandard1.0/Validation.dll",
-        "lib/netstandard1.0/Validation.xml",
-        "lib/netstandard1.3/Validation.dll",
-        "lib/netstandard1.3/Validation.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Validation.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Validation.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Validation.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Validation.xml",
-        "tools/2013/RequiresNotNull.snippet",
-        "tools/2013/RequiresNotNullOrEmpty.snippet",
-        "tools/2015/RequiresNotNull.snippet",
-        "tools/2015/RequiresNotNullOrEmpty.snippet",
-        "tools/install_snippets.cmd",
-        "tools/uninstall_snippets.cmd",
-        "validation.2.4.18.nupkg.sha512",
-        "validation.nuspec"
-      ]
-    },
-    "xunit.abstractions/2.0.2": {
-      "sha512": "vItLB0WkaKg0426RgWq+ZdXH6D+YV/uH28C0weWMOBnVx7I+luHuEYss9hoOngpkiN5kUpLvh9VZRx1H2sk59A==",
-      "type": "package",
-      "path": "xunit.abstractions/2.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net35/xunit.abstractions.dll",
-        "lib/net35/xunit.abstractions.xml",
-        "lib/netstandard1.0/xunit.abstractions.dll",
-        "lib/netstandard1.0/xunit.abstractions.xml",
-        "lib/netstandard2.0/xunit.abstractions.dll",
-        "lib/netstandard2.0/xunit.abstractions.xml",
-        "xunit.abstractions.2.0.2.nupkg.sha512",
-        "xunit.abstractions.nuspec"
-      ]
-    },
-    "xunit.core/2.4.0": {
-      "sha512": "BJ/O/tPEcHUCwQYuwqXoYccTMyw6B5dA6yh7WxWWBhKbjqTsG9RWL0nCQXM5yQYJwUuFzBkiXDPN1BO6UdBB4Q==",
-      "type": "package",
-      "path": "xunit.core/2.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/xunit.core.props",
-        "build/xunit.core.targets",
-        "buildMultiTargeting/xunit.core.props",
-        "buildMultiTargeting/xunit.core.targets",
-        "xunit.core.2.4.0.nupkg.sha512",
-        "xunit.core.nuspec"
-      ]
-    },
-    "xunit.extensibility.core/2.4.0": {
-      "sha512": "qr/KrR6uukHXD9e/lLQjyCPfMEDuvvhNFDzsYzCF2kKlYKiqcADfUvA9Q68rBtKFtwHFeghjWEuv15KoGD2SfA==",
-      "type": "package",
-      "path": "xunit.extensibility.core/2.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net452/xunit.core.dll",
-        "lib/net452/xunit.core.dll.tdnet",
-        "lib/net452/xunit.core.xml",
-        "lib/net452/xunit.runner.tdnet.dll",
-        "lib/net452/xunit.runner.utility.net452.dll",
-        "lib/netstandard1.1/xunit.core.dll",
-        "lib/netstandard1.1/xunit.core.xml",
-        "lib/netstandard2.0/xunit.core.dll",
-        "lib/netstandard2.0/xunit.core.xml",
-        "xunit.extensibility.core.2.4.0.nupkg.sha512",
-        "xunit.extensibility.core.nuspec"
-      ]
-    },
-    "xunit.extensibility.execution/2.4.0": {
-      "sha512": "252Dzn7i5bMPKtAL15aOP3qJhxKd+57I8ldwIQRJa745JxQuiBu5Da0vtIISVTtc3buRSkBwVnD9iUzsEmCzZA==",
-      "type": "package",
-      "path": "xunit.extensibility.execution/2.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net452/xunit.execution.desktop.dll",
-        "lib/net452/xunit.execution.desktop.xml",
-        "lib/netstandard1.1/xunit.execution.dotnet.dll",
-        "lib/netstandard1.1/xunit.execution.dotnet.xml",
-        "lib/netstandard2.0/xunit.execution.dotnet.dll",
-        "lib/netstandard2.0/xunit.execution.dotnet.xml",
-        "xunit.extensibility.execution.2.4.0.nupkg.sha512",
-        "xunit.extensibility.execution.nuspec"
-      ]
-    },
-    "Xunit.SkippableFact/1.3.12": {
-      "sha512": "CQETcfKyEq6Uki9pExNZI5sEHeKqdt9Fc4pdLHu1mgaboQp0aI4W45M+UUnG6Zc2hxWTDmbD2AFVKA1wjU19YA==",
-      "type": "package",
-      "path": "xunit.skippablefact/1.3.12",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Xunit.SkippableFact.dll",
-        "lib/net45/Xunit.SkippableFact.xml",
-        "lib/net452/Xunit.SkippableFact.dll",
-        "lib/net452/Xunit.SkippableFact.xml",
-        "lib/netstandard1.1/Xunit.SkippableFact.dll",
-        "lib/netstandard1.1/Xunit.SkippableFact.xml",
-        "xunit.skippablefact.1.3.12.nupkg.sha512",
-        "xunit.skippablefact.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -6247,7 +6056,7 @@
       "Newtonsoft.Json >= 12.0.3",
       "Newtonsoft.Json.Schema >= 3.0.13",
       "RestSharp >= 106.11.4",
-      "SpecFlow.xUnit >= 3.4.3",
+      "SpecFlow.NUnit >= 3.4.3",
       "nunit >= 3.12.0"
     ]
   },
@@ -6312,7 +6121,7 @@
             "target": "Package",
             "version": "[106.11.4, )"
           },
-          "SpecFlow.xUnit": {
+          "SpecFlow.NUnit": {
             "target": "Package",
             "version": "[3.4.3, )"
           },
