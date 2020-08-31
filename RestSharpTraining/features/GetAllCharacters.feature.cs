@@ -112,10 +112,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have my testing endpoint \"/characters\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.And("add my api key", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("add my api key", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.And("send the get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("send the get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
  testRunner.Then("my status code should be \"OK\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

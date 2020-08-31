@@ -3,8 +3,8 @@
 @get @getacharacter @regression @smoke
 Scenario Outline: get one character
 	Given I have my testing endpoint "/characters/" and <id> of the character
-	And add my api key
-	And send the get request
+	When add my api key
+	When send the get request
 	Then my status code should be "OK"
 	Then Assert that name is <name>
 

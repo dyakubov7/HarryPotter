@@ -25,7 +25,7 @@ namespace RestSharpTraining.step_definitions
 
 
 
-        [Given(@"send the get request")]
+        [When(@"send the get request")]
         public void GivenSendTheGetRequest()
         {
             response = client.Get(request);
@@ -34,7 +34,7 @@ namespace RestSharpTraining.step_definitions
         [Then(@"my status code should be ""(.*)""")]
         public void ThenMyStatusCodeShouldBe(string status)
         {
-           // Assert.AreEqual(status, response.StatusCode.ToString());
+           Assert.AreEqual(status, response.StatusCode.ToString());
         }
 
         [Then(@"Assert that it assigns a proper house")]
@@ -47,12 +47,7 @@ namespace RestSharpTraining.step_definitions
             houses.Add("Hufflepuff");
             string actual = response.Content;
             actual = actual.Replace("\"", "");
-
-            Console.WriteLine(actual);
-            if (houses.Contains(actual))
-                Assert.Pass();
-            else
-                Assert.Fail();
+            Assert.IsTrue(houses.Contains(actual));
         }
         [Given(@"I have my testing endpoint ""(.*)"" and (.*) of the character")]
         public void GivenIHaveMyTestingEndpointAndOfTheCharacter(string endpoint, string id)
@@ -71,7 +66,7 @@ namespace RestSharpTraining.step_definitions
 
             Assert.AreEqual(name, character1.Name);
         }
-        [Given(@"add my api key")]
+        [When(@"add my api key")]
         public void GivenAddMyApiKey()
         {
             request.AddParameter("key", Endpoints.API_KEY);
@@ -85,6 +80,8 @@ namespace RestSharpTraining.step_definitions
             Assert.AreEqual(size, characters.Count);
             Console.WriteLine(content);
         }
+
+
 
 
 

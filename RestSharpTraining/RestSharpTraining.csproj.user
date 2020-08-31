@@ -5,5 +5,8 @@
     <Compile Update="step_definitions\ApiStepDefs.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="step_definitions\Hooks.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

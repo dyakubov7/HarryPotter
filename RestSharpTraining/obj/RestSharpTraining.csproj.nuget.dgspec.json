@@ -41,9 +41,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "ExtentReports": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.4.0, )"
+            },
+            "NUnit.Console": {
+              "target": "Package",
+              "version": "[3.11.1, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
@@ -64,10 +72,6 @@
             "SpecFlow.NUnit": {
               "target": "Package",
               "version": "[3.4.3, )"
-            },
-            "nunit": {
-              "target": "Package",
-              "version": "[3.12.0, )"
             }
           },
           "imports": [
