@@ -18,7 +18,8 @@ namespace RestSharpTraining.step_definitions
         private static ExtentReports Reports;
         protected static ExtentTest Test;
         private static string FeatureTitle;
-        [BeforeTestRun]
+
+       [BeforeTestRun]
         public static void setUp()
         {
             Reports = ReportingUtil.InitializeExtentReport("HarryPotter");
@@ -39,6 +40,8 @@ namespace RestSharpTraining.step_definitions
             scenarioTest = Reports.CreateTest<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
 
         }
+
+        
         [AfterStep]
         public static void WritingTestResults()
         {
@@ -65,7 +68,6 @@ namespace RestSharpTraining.step_definitions
                         return;
                 }
             }
-
             if (scenarioContext.TestError == null)
             {
                 switch (stepType)

@@ -79,10 +79,10 @@ namespace RestSharpTraining.Features
         [NUnit.Framework.CategoryAttribute("getacharacter")]
         [NUnit.Framework.CategoryAttribute("regression")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        [NUnit.Framework.TestCaseAttribute("5a0fa4daae5bc100213c232e", "Hannah Abbott", null)]
-        [NUnit.Framework.TestCaseAttribute("5a107f17e0686c0021283b1d", "Alecto Carrow", null)]
-        [NUnit.Framework.TestCaseAttribute("5a0fa54aae5bc100213c232f", "Bathsheda Babbling", null)]
-        public virtual void GetOneCharacter(string id, string name, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("5a0fa4daae5bc100213c232e", "Hannah Abbott", "\'HannahAbbotSchema\'", null)]
+        [NUnit.Framework.TestCaseAttribute("5a107f17e0686c0021283b1d", "Alecto Carrow", "\'AlectoCarrowSchema\'", null)]
+        [NUnit.Framework.TestCaseAttribute("5a0fa54aae5bc100213c232f", "Bathsheda Babbling", "\'BathshedaBabblingSchema\'", null)]
+        public virtual void GetOneCharacter(string id, string name, string filename, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "get",
@@ -97,6 +97,7 @@ namespace RestSharpTraining.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("name", name);
+            argumentsOfScenario.Add("filename", filename);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("get one character", null, tagsOfScenario, argumentsOfScenario);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
@@ -132,6 +133,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 9
  testRunner.Then(string.Format("Assert that name is {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 10
+ testRunner.Then(string.Format("Assert the json schema with {0}", filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

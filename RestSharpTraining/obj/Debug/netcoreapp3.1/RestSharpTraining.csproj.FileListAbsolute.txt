@@ -105,7 +105,6 @@ C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\net
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\Utf8Json.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\obj\Debug\netcoreapp3.1\RestSharpTraining.csprojAssemblyReference.cache
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\DnsClient.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\ExtentReports.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.dll
@@ -174,3 +173,4 @@ C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\net
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\runtimes\win-x64\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\bin\Debug\netcoreapp3.1\runtimes\win-x86\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\obj\Debug\netcoreapp3.1\RestSharpTraining.csproj.CoreCompileInputs.cache
+C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\obj\Debug\netcoreapp3.1\RestSharpTraining.csprojAssemblyReference.cache

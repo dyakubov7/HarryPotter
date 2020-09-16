@@ -1,9 +1,12 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 using NUnit.Framework;
 using RestSharp;
 using RestSharpTraining.pojos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
@@ -11,11 +14,13 @@ using TechTalk.SpecFlow;
 namespace RestSharpTraining.step_definitions
 {
     [Binding]
-    public sealed class ApiStepDefs : Endpoints 
+    public sealed class ApiStepDefs
     {
         IRestClient client = new RestClient(Endpoints.BASE_URL);
         IRestRequest request;
         IRestResponse response;
+
+        string house = "";
 
         [Given(@"I have my testing endpoint ""(.*)""")]
         public void GivenIHaveMyTestingEndpoint(string endpoint)
@@ -80,6 +85,38 @@ namespace RestSharpTraining.step_definitions
             Assert.AreEqual(size, characters.Count);
             Console.WriteLine(content);
         }
+
+        [Then(@"Assert the json schema with '(.*)'")]
+        public void ThenAssertTheJsonSchemaWith(string fileName)
+        {
+            
+            
+                fileName = fileName.Replace("'", "");
+
+                string path = @"C:\Users\dyakubov\source\repos\RestSharpTraining\RestSharpTraining\Schemas\" + fileName + ".json";
+
+                var schema = File.ReadAllText(path);
+
+                JSchema validSchema = JSchema.Parse(schema);
+
+                JObject obj = JObject.Parse(response.Content);
+
+                Assert.IsTrue(obj.IsValid(validSchema));
+        }
+        [Given(@"I have my assigned house")]
+        public void GivenIHaveMyAssignedHouse()
+        {
+            request = new RestRequest(Endpoints.GET_SORTING_HAT);
+            response = client.Get(request);
+            house = response.Content;
+            Console.WriteLine(house);
+        }
+
+
+
+
+
+
 
 
 
